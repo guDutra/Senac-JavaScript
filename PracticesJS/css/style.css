@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#cabecalho {
+
+    height: 300px;
+    background-color: green;
+    height: 100%;
+    
+}
+
+
+#cabecalho h1 {
+
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color: white;
+    padding-top: 15px;
+    height: 80%;
+}
+#infoTXT {
+    margin-left: 30px;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: white;
+    font-size: 20px;
+}
+
+#infoTXT:hover {
+    font-size: 25px;
+    text-decoration: underline white;
+}
+
+#infoBT {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    width: 230px;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: black;
+    font-size: 20px;
+}
+
+.btCadastraCand {
+    margin-left: 30px;
+    margin-bottom: 15px;
+    width: 230px;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: black;
+    font-size: 20px;
+}
+.btDarkMode {
+  margin-left: 30px;
+    margin-bottom: 15px;
+    width: 230px;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: white;
+    font-size: 20px;
+}
+#urna {
+    width: 95%;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 20px;
+    background-color: white;
+    height: 580px;
+    
+    
+   
+}
+
+#telaNumeros {
+    width: 45%;
+    height: 20%;
+}
+#campo {
+    height: 80px;
+    width: 470px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 40px;
+}
+#areaNumeros {
+
+    width: 480px;
+   
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-top: 20px;
+   
+}
+#corpo {
+    background-color: yellowgreen;
+}
+.numeros {
+
+    width: 150px;
+    height: 80px;
+    margin-right: 5px;
+    margin-top: 5px;
+   
+}
+.btn-outline-success {
+    --bs-btn-font-size: 30px;
+  }
+
+.teclas {
+    width: 150px;
+    height: 80px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+
+.btn-warning {
+    --bs-btn-font-size: 25px;
+}
+
+.btn-secondary {
+    --bs-btn-font-size: 25px;
+}
+
+.btn-dark{
+    --bs-btn-font-size: 25px;
+}
+  #areaCandidato {
+
+    position: absolute;
+    left: 55%;
+    
+    height: 480px;
+    width: 500px;
+    bottom: -22%;
+   
+  }
+
+
+  #fotoCandidato {
+    background-image: url('/images/cinza.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    width: 80%;
+    margin-top: 25px;
+  }
+
+
+  
+  .Confirma {
+    width: 98%;
+    margin-right: 5px;
+    margin-top: 5px;
+    height: 60px;
+  }
+  #nomeCandidato {
+
+    text-align: left;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  #btResultados {
+
+    position: absolute;
+    left: 58%;
+    
+    
+    height: 60px;
+    bottom: -28%;
+    width: 300px;
+    
+
+  }
+
+
+  #tabelaResultados {
+
+    width: 600px;
+   
+    margin-left: 30px;
+  }
+
+
+  #tabelaResultados th{
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+  }
+
+  #tabelaResultados tr{
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+  }
+
+  #areaFotoGanhador {
+        position: absolute;
+        left: 55%;
+        height: 300px;
+        width: 410px;
+        bottom: 5%;
+         display: none;
+        background-color: #f2cc8f;
+        border-width: 2px;
+        border-style: solid;
+        border-color: yellow;
+
+        
+  }
+
+  #fotoGanhador {
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    padding-top: 35px;
+    margin: auto;
+    
+    
+  }
+#nomeGanhador {
+    color: black;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+  #telaResultados {
+    height: 900px;
+    width: 100%;
+    display: none;
+  }
+
+  #H3 {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 30px;
+   
+    text-decoration: underline green;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .btVoltaTelaInicial {
+    margin-left: 30px;
+    width: 220px;
+    height: 50px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+  }
+
+
+

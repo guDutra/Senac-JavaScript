@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link id="csss" rel="stylesheet" href="/css/style.css" >
+    <script src="/JS/classCandidatos.js"></script>
+    <script src="/JS/classVotantes.js"></script>
+    <script src="/JS/classResultados.js"></script>
+    <script src="/JS/script.js"></script>
+ 
+    <title>Formulário de Cadastro</title>
+ 
+
+</head>
+
+<header>
+
+    <div id="cabecalho">
+
+        <h1>ELEIÇÕES 2023</h1>
+       
+        <button type="button" id="infoBT" class="btn btn-light btn-sm " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Consultar candidatos
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 " style="color: black;" id="staticBackdropLabel">Nome dos candidatos e seus respectivos números:</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="divConsultaCand">
+                 <h3>Neymar - 010</h3>
+                 <h3>Corpse - 666</h3>
+                 <h3>Mc Poze - 333</h3>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                 
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <div class="dropdown">
+              <button type="button" class="btn btn-light dropdown-toggle  btCadastraCand" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                Cadastrar Candidato
+              </button>
+              <form class="dropdown-menu p-4">
+                <div class="mb-3">
+                  <label for="numero" class="form-label">Número:</label>
+                  <input type="text" class="form-control" step="100" id="numero" placeholder="000" required>
+                </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nome:</label>
+                  <input type="text" class="form-control" id="name" placeholder="Fulado da Silva" required>
+                </div>
+                <div class="mb-3">
+                  <label for="imagem" class="form-label">Imagem:</label>
+                  <input type="text" class="form-control" id="imagem" placeholder="link da foto do Candidato" required>
+                </div>
+
+                
+                <button type="button" class="btn btn-success" onclick="CadastraCandidato()">Cadastrar</button>
+              </form>
+            </div>
+           
+                    <button type="button" class="btn btn-dark btDarkMode" onclick="DarkMode()">Modo Noturno</button>
+
+            
+           
+
+    </div>
+
+</header>
+
+<body id="corpo">
+    
+  <div id="urna" >
+    <div id="telaInicial">
+
+    <div id="telaNumeros">
+
+        <input type="text" size="30px" height="70px" id="campo"  disabled>
+    </div>
+    
+    <div id="areaCandidato" >
+
+        <div id="fotoCandidato"> </div>
+        <p id="nomeCandidato"> </p>
+
+    </div>
+
+
+    <div id="areaNumeros" >
+
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(1)">1</button>
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(2)">2</button>
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(3)">3</button>
+        <button type="button" class="btn btn-outline-success numeros " onclick="ColocaNumero(4)">4</button>
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(5)">5</button>
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(6)">6</button>
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(7)">7</button>
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(8)">8</button>
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(9)">9</button>
+        <button type="button" class="btn btn-outline-success numeros" onclick="ColocaNumero(0)">0</button>
+        <button type="button" class="btn btn-warning teclas" onclick="btCancela()">Cancela</button>
+        <button type="button" class="btn btn-secondary teclas" onclick="btNulo()">Nulo</button>
+         <!-- <button type="button" class="btn btn-dark teclas">Confirma</button> --->
+         <div class="dropdown">
+            <button type="button" class="btn btn-dark Confirma dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+              Confirma
+            </button>
+            <form class="dropdown-menu p-4">
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Beltrano da Silva" required>
+              </div>
+              <div class="mb-3">
+                <label for="idade" class="form-label">Idade:</label>
+                <input type="text" class="form-control" id="idade" placeholder="18" required>
+              </div>
+            
+              <button type="button" onclick="Votar()" class="btn btn-success">Confirmar Voto</button>
+            </form>
+          </div>
+    </div>
+
+
+    <button type="button" class="btn btn-outline-dark" id="btResultados" onclick="Results()"> RESULTADOS</button>
+    
+  
+   </div>
+  </div>
+
+  <div id="telaResultados">
+
+
+    <div id="boxResult">
+
+    </div>
+
+    <button type="button" class="btn btn-light btVoltaTelaInicial" onclick="mostraTelaInicial()">Volta para votação</button>
+    <div id="areaFotoGanhador" >
+       <h3 id="H3" style="padding-top: 10px;"> O NOVO PRESIDENTE É:</h3>
+      <div id="fotoGanhador" style="margin-top: 10px;"></div>
+      <p id="nomeGanhador"></p>
+    </div>
+
+
+    
+
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>
