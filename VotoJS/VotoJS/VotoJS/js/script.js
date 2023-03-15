@@ -27,7 +27,7 @@ if(parseInt(txt.value) == 55) {
     imagem.style.backgroundImage = "url('/VotoJS/js/kin.jpg')";*/
     console.log("oi")
     const stylesheet = new CSSStyleSheet();
-            stylesheet.insertRule("#foto {background-image: url('/VotoJS/js/kin.jpg'); background-size: cover; }");
+            stylesheet.insertRule("#foto {background-image: url('/VotoJS/VotoJS/js/kin.jpg'); background-size: cover; }");
             document.adoptedStyleSheets = [stylesheet];
 
     
@@ -39,7 +39,7 @@ if(parseInt(txt.value) == 69) {
    console.log('kanyeeee')
    const stylee = new CSSStyleSheet(); 
 
-   stylee.insertRule("#foto {background-image: url('/VotoJS/js/kanye.jfif'); background-size: cover; }");
+   stylee.insertRule("#foto {background-image: url('/VotoJS/VotoJS/js/kanye.jfif'); background-size: cover; }");
    document.adoptedStyleSheets = [stylee];
 
   
@@ -279,13 +279,13 @@ function mudaFotoGanhador(vencedor) {
     if(winner == 'Kanye') {
         const stylee = new CSSStyleSheet(); 
 
-        stylee.insertRule("#fotoGanhador {background-image: url('/VotoJS/js/kanye.jfif'); background-size: cover; }");
+        stylee.insertRule("#fotoGanhador {background-image: url('/VotoJS/VotoJS/js/kanye.jfif'); background-size: cover; }");
         document.adoptedStyleSheets = [stylee];
     }
 
     if(winner == 'Kin') {
         const stylesheet = new CSSStyleSheet();
-        stylesheet.insertRule("#fotoGanhador {background-image: url('/VotoJS/js/kin.jpg'); background-size: cover; }");
+        stylesheet.insertRule("#fotoGanhador {background-image: url('/VotoJS/VotoJS/js/kin.jpg'); background-size: cover; }");
         document.adoptedStyleSheets = [stylesheet];
         console.log('MDS')
     }

@@ -1,86 +1,92 @@
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="/VotoJS/css/style.css">
-    <script src="/VotoJS/js/script.js"></script>
-    <script src="/VotoJS/js/classeCandidato.js" ></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
-  <body>
 
-<div id="telaVoto" >
-  <input type="text" size="30px" height="70px" id="campo"  >
-    
-  <div id="teclas" > 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="/VotoJS/VotoJS/css/style.css">
+  <script src="/VotoJS/VotoJS/js/script.js"></script>
+  <script src="/VotoJS/js/classeCandidato.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
 
-    <button type="button" class="btn btn-outline-success"  onclick="ColocaNumero(1)">1</button>
-    <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(2)">2</button>
-    <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(3)">3</button>
-    <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(4)">4</button>
-    <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(5)">5</button>
-    <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(6)">6</button>
-    <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(7)">7</button>
-    <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(8)">8</button>
-    <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(9)">9</button>
-    <button type="button" class="btn btn-outline-success"  onclick="ColocaNumero(0)">0</button>
-    <button type="button" class="btn btn-outline-secondary" id="Confirma" onclick="verificaCandidato() " >Confirma</button>
+<body>
+
+  <div id="telaVoto">
+    <input type="text" size="30px" height="70px" id="campo">
+
+    <div id="teclas">
+
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(1)">1</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(2)">2</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(3)">3</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(4)">4</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(5)">5</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(6)">6</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(7)">7</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(8)">8</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(9)">9</button>
+      <button type="button" class="btn btn-outline-success" onclick="ColocaNumero(0)">0</button>
+      <button type="button" class="btn btn-outline-secondary" id="Confirma"
+        onclick="verificaCandidato() ">Confirma</button>
+    </div>
+
+
+    <div id="foto">
+
+
+      <p id="mensa"> </p>
+    </div>
+    <button id="resultados" type="button" class="btn btn-dark" onclick="sometelaVotoSenha()">Resultados</button>
   </div>
 
 
-  <div id="foto">
-
-    
-<p id="mensa"> </p>
-  </div>
-  <button id="resultados" type="button" class="btn btn-dark"  onclick="sometelaVotoSenha()">Resultados</button>
-</div>
-   
 
 
-   
 
-   <div id="telaResultados">
+  <div id="telaResultados">
 
     <h1> Resultados</h1>
 
-    <p  id="votosCom" >Votos computados:</p>
+    <p id="votosCom">Votos computados:</p>
     <p id="votosKW">Votos Kanye West: </p>
     <p id="votosKin"> Votos pro Kin:</p>
     <p id="nulos">Votos Nulos:</p>
 
-    <div id="fotoGanhador" >
+    <div id="fotoGanhador">
 
       <p>a</p>
     </div>
 
 
-   </div>
+  </div>
 
 
 
-<div id="telaSenha">
+  <div id="telaSenha">
 
-  <div id="senhaEspaco">
+    <div id="senhaEspaco">
 
-    <div class="form-floating mb-3">
-      <input  type="password" class="form-control"  id="floatingInput"  >
-      <label for="floatingInput">Senha:</label>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingInput">
+        <label for="floatingInput">Senha:</label>
 
-     <button id="enviar" type="button" class="btn btn-dark"  onclick="Validar()">Validar</button>
+        <button id="enviar" type="button" class="btn btn-dark" onclick="Validar()">Validar</button>
 
 
+
+      </div>
 
     </div>
 
   </div>
 
-</div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
 </html>
