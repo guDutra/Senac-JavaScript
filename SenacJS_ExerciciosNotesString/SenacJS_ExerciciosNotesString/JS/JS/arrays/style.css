@@ -1,0 +1,38 @@
+#camposinsere input {
+     width: 300px;
+     padding: 10px;
+   
+}
+
+form {
+    margin-left: 200px;
+    margin-top: 70px;
+    width: 500px;
+   
+    padding: 20px;
+}
+
+#camposinsere #valor input {
+
+    width: 50px;
+}
+
+#firstButt {
+    padding: 10px;
+}
+
+#secondButt {
+    padding: 10px;
+}
+
+#ordena {
+    padding: 10px;
+}
+
+#ordena button {
+    margin-left: 10px;
+}
+
+
+
+

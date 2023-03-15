@@ -1,0 +1,95 @@
+#formulario {
+    width: 300px;
+    margin-left: 40px;
+    margin-top: 50px;
+    background-color: #a3b18a;
+    padding: 15px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 1px;
+    border-style: dotted;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("/JQuery/html/wp5189182.webp");
+    background-size: cover;
+}
+
+#formulario h1 {
+    font-size: 34px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#botao, #boton {
+    margin-top: 15px;
+    width: 180px;
+    text-align: center;
+    margin-left: 50px;
+    background-color: #d6ccc2;
+    color: black;
+}
+
+.valorTXT {
+    margin-top: 10px;
+}
+
+#botao:hover{
+    margin-top: 15px;
+    width: 180px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 50px;
+    background-color: #472d30;
+    color: white
+}
+#boton:hover{
+    margin-top: 15px;
+    width: 180px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 50px;
+    background-color: #472d30;
+    color: white
+}
+#tabelinha th {
+  
+    border-color: black;
+    border-width: 1px;
+    padding: 5px;
+    background-color: #8e9aaf;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#tabelinha table  {
+    width: 500px;
+
+}
+.totais {
+    background-color: #e5e5e5;
+    color: black;
+}
+#tabelinha {
+    margin-top: 50px;
+    margin-left: 45px;
+    visibility: hidden;
+    
+}
+
+#tabelinha  td {
+    padding: 5px;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e5e5e5;
+    color: black;
+ 
+}

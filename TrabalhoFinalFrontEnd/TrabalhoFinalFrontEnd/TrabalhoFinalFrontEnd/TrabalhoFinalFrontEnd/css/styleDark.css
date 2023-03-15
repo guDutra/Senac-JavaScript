@@ -1,0 +1,100 @@
+*  {
+    margin: 0;
+    padding: 0;
+}
+#corpo {
+    background-color: white;
+}
+#bt {
+    background-image: url('/TrabalhoFinalFrontEnd/images/sacola.png');
+}
+.navbar-expand-lg  {
+    margin-bottom: 15px;
+}
+#telaInicial {
+    background-color: black;
+}
+header {
+    background-color: black;
+}
+
+#corpo {
+    background-color: black;
+}
+#cardizin {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: black;
+    padding: 5px;
+    margin-top: 15px;
+    
+}
+.dropdown-item {
+    font-size: 20px;
+}
+
+#telaSenha {
+   visibility: hidden;
+}
+
+
+#fundinho {
+    width: 100%;
+    background-color: black;
+    margin-top: 15px;
+}
+
+nav a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5px;
+}
+
+#carroca {
+    margin: auto;
+    width: 50%;
+    background-color: black;
+}
+#confira {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    
+    background-color: #0a0908 ;
+    color: white;
+    border-radius: 15px;
+    border-color: #c6ac8f;
+    width: 500px;
+    margin: auto;
+    
+}
+
+#loguinho  {
+    border-radius: 10px;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25%;
+    margin-left: 65px;
+    margin-right: 15px;
+    margin-top: 15px;
+    background-color: #6a040f;
+    
+}
+
+#cardFundo  {
+    background-color: #6a040f;
+    color: white;
+}
+#cardFundo li  {
+    background-color: #6a040f;
+    color: white;
+}
+
+
+
+
+.card img {
+    height: 300px;
+}

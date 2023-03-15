@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Music Acessories Starboy</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/js/classUsers.js"></script>
+        <script src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/js/classProduto.js"></script>
+        <script src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/js/classCarrinho.js"></script>
+        <script src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/js/script.js"></script>
+        <link id="csss" rel="stylesheet" href="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      </head>
+      <header id="header">
+        <nav class="navbar navbar-dark bg-dark navbar navbar-expand-lg"  id="divNav" >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <img id="loguinho" src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/images/starboy.jpg" alt="Bootstrap" width="50" height="50">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <button class="nav-link active btn-dark text-light bg-dark" style="margin-top: 10px; margin-left: 10px; border-color: #292b2c"" aria-current="page" href="#">Home</button>
+                </li>
+                <li class="nav-item">
+                  
+                  <button class="nav-link active  btn-dark text-light bg-dark" style="margin-top: 10px; border-color: #292b2c" id="botaoEntrar"onclick="someTelaInicialShowTelaSenha()" >Entrar</button>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" style="margin-top: 10px; color: white; " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filtrar
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" id="camisaFiltro" href="#">Camisetas</button></li>
+                    <li><button class="dropdown-item" id="moletomFiltro" href="#">Moletons</button></li>
+                    <li><button class="dropdown-item" id="calcaFiltro" href="#">Calças</button></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><button class="dropdown-item" id="menorPrecoFiltro" href="#">Menor Preço</button></li>
+                    <li><button class="dropdown-item" id="maiorPrecoFiltro">Maior Preço</button></li>
+                  </ul>
+                </li>
+               
+              </ul>
+              <button id="botao" class="btn btn-light" onclick="DarkMode()" type="submit">Noturno</button>
+            
+              <button id="bt" style="margin-right: 20px;" type="button" class="btn position-relative" onclick="someTelaInicialShowTelaCompras()">
+               <img src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/images/icons8-carrinho-de-compras-32.png" alt=""> 
+                <span id="contagemCompras" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">0</span>
+              </button>
+
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="text" placeholder="Produto" aria-label="Search" id="procurarProdutoTI">
+                <button id="botao" class="btn btn-light" onclick="procuraProdutoTI()" type="button">Procurar</button> 
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+<body id="corpo" >
+ 
+    <div id="telaInicial" >
+  
+      <p id="confira"> Confira os produtos em destaque!! </p>
+      <div id="fundinho" >
+        <div id="carroca">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/images/camisaBrancaArctic.jfif" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/images/one.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/images/artickCamisa.webp" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="cardizin"></div>
+    </div> <!-- FIM DIV DA TELA INICIAL-->
+
+    <div id="telaSenha">
+
+      <div id="cabecalhoTS">
+        <button id="botaoVoltaTI" type="button" style="width: 15%; font-size: 20px; height: 60px; margin-left: 25px; margin-top: 15px;" class="btn btn-outline-light">Voltar</button>
+        <p>Login Administradores</p>
+      </div>
+      <form id="formularioLogin">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" style=" font-size: 20px;" class="form-label" >Username</label>
+          <input type="text" class="form-control usernameTXT" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">Lembre-se que esse é seu Username não seu nome</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1"style=" font-size: 20px;"  class="form-label" >Senha</label>
+          <input type="password" class="form-control senhaTXT" id="exampleInputPassword1">
+        </div>
+        <button id="botaoLoga"  type="button" style="width: 150px; font-size: 20px;" class="btn btn-dark">Entrar</button>
+      </form>
+
+
+    </div> <!-- FIM DIV DA TELA SENHA-->
+
+    <div id="telaAdmin">
+
+      <nav class="navbar navbar-expand-lg bg-light" id="barraNavTLADMIN">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mt-2 mb-2 mb-lg-0">
+              <li>
+                <p class="navbar-brand " >Gustavo</p>
+              </li>
+             <li class="nav-item">
+              <p class="navbar-text" >Admin User</p>
+             </li>
+             <li class="nav-item">
+              <form class="container-fluid justify-content-start">
+                <button class="btn btn-lm btn-outline-secondary " type="button" id="voltaTelaInicialProd">Tela Inicial</button>
+              </form>
+             </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Produtos
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><button style="font-size: 20px;" class="dropdown-item" id="CadastraProduto" >Cadastrar</button></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><button style="font-size: 20px;" class="dropdown-item" >Consultar</button></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Usuarios
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><button style="font-size: 20px;" id="cadastraUser" class="dropdown-item">Cadastrar</button></li>
+                 
+                  <li><hr class="dropdown-divider"></li>
+                  <li><button style="font-size: 20px;" class="dropdown-item" id="consultaUser">Consultar</button></li>
+                </ul>
+              </li>
+             
+              <li class="nav-item">
+                <button style="margin-left: 10px;" class="btn btn-lm btn-outline-secondary  " type="button">
+                  Estoque</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<div id="InicioTelaAdmin" >
+  <p id="parabens" class="text-white">Parabéns você é um usuário administrador no site</p>
+  <div id="divImgTelaAdmin">
+    <img src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/images/starboyBlackName.jpg" alt="">
+  </div>
+  <p  id="aproveite" class="text-white">Aproveite</p>
+</div>
+
+<div id="telaCadastroUsuarios">
+
+  <p id="txtDigite">Digite as informações para o cadastro do novo usuário</p>
+  <form id="formularioCadastroUser">
+    <div class="mb-3">
+      <label for="exampleInputPassword1"style=" font-size: 20px;"  class="form-label" >Nome</label>
+      <input type="text" class="form-control nomeTXTCadastro" >
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" style=" font-size: 20px;" class="form-label" >Username</label>
+      <input type="text" class="form-control usernameTXTCadastro" aria-describedby="emailHelp">
+     
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1"style=" font-size: 20px;"  class="form-label" >Senha</label>
+      <input type="password" class="form-control senhaTXTCadastro" >
+    </div>
+    <button id="botaoCadastraUserForm"  type="button" style="width: 150px; font-size: 20px;" class="btn btn-dark">Cadastrar</button>
+  </form>
+  
+
+</div>
+
+<div id="TelaConsultaUsuarios">
+</div>
+
+ <div id="telaCadastroProduto">
+  <p id="txtDigitee">Digite as informações para o cadastro de um novo produto</p>
+
+  <form id="formularioCadastroProduto" class="row g-3">
+    <div class="col-md-12">
+      <label for="inputEmail4" class="form-label ">Nome</label>
+      <input type="text" class="form-control nomeProdutoTXT" id="inputEmail4">
+    </div>
+ 
+    <div class="col-12">
+      <label for="inputAddress" class="form-label ">Descricao</label>
+      <input type="text" class="form-control descricaoProdutoTXT" id="inputAddress" placeholder="Cor branca - Manga curta..etc">
+    </div>
+    <div class="input-group md-3">
+      <label class="input-group-text" for="inputGroupFile01 ">Imagem</label>
+      <input type="text" class="form-control imagemProdutoTXT" id="inputGroupFile01">
+    </div>
+    <div class="col-md-6">
+      <label for="inputAddress2" class="form-label ">Quantidade Estoque</label>
+      <input type="number" class="form-control EstoqueProdutoTXT" id="inputAddress2" >
+    </div>
+    <div class="col-md-6">
+      <label for="inputStatee" class="form-label ">Aparecer na Vitrine</label>
+      <select id="inputStatee" class="form-select VitrineSelect">
+        
+        <option selected>true</option>
+        <option>false</option>
+        
+      </select>
+    </div>
+   
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">Tipo</label>
+      <select id="inputState" class="form-select TipoSelect">
+        <option selected> Camisa</option>
+        <option>Moletom</option>
+        <option>Calca</option>
+        <option>Vinil</option>
+        <option>Quadro</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Valor</label>
+      <input type="text" class="form-control valorProduto" id="inputZip">
+    </div>
+    <div class="col-12">
+     
+    <div class="col-md-8">
+      <button id="botaoCadastraProduto" type="button" class="btn btn-light">Cadastrar</button>
+    </div>
+  </form>
+
+ </div> 
+
+    </div>
+
+  </div>
+  
+    <div id="telaCompras">
+
+
+      
+           <nav class="navbar navbar-dark bg-black" id="navCarrinho">
+            <div class="container-fluid">
+              <a class="col-md-4" >
+                <img  src="/TrabalhoFinalFrontEnd/TrabalhoFinalFrontEnd/images/starboyBlackName.jpg" alt="Bootstrap" width="30" height="24">
+              </a>
+              
+                <p id="textNav" class="navbar-text text-light col-md-8"> Seu Carrinho de Compras </p> 
+            </div>
+          </nav>
+
+          <div id="ConteudoTelaCompras" style="margin-top: 15px;">
+
+          
+
+          </div>
+
+          <button id="btCancelaCompra" onclick="cancelarCompra()" type="button" style="height: 80px; margin-top: 10px; font-size: 30px; margin-left: 35px; width: 350px;" class="btn  btn-dark" > Cancelar Compra  </button>
+          <button id="btFinalizaCompra" onclick="compraRealizada()" type="button" style="height: 80px; margin-top: 10px; font-size: 30px; margin-left: 35px; width: 350px;" class="btn  btn-dark">Finalizar Compra</button>
+    </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+     
+     <script type="text/javascript">
+        window.addEventListener("load", CriaProdutosPadrao());
+    </script>
+</body>
+</html>
