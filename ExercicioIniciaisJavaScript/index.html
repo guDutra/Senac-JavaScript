@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+
+    <form>
+        <label for="nota1">Primeira Nota:</label>
+        <input type="number" name="nota1" id="nota1">
+
+        <label for="nota2">Segunda Nota:</label>
+        <input type="number" name="nota2" id="nota2">
+
+        <label for="nota3">Terceira Nota:</label>
+        <input type="number" name="nota3" id="nota3">
+
+
+        <label for="resultado"> Resultado</label>
+        <input type="number" name="resultado" id="resultado">
+
+
+    </form>
+    <button onclick="calculaMedia()">Calcular</button>
+
+    <script>
+
+        function calculaMedia() {
+            var txtresultado = document.getElementById('resultado');
+            console.log(txtresultado)
+            var nota1 = document.getElementById('nota1').value;
+
+
+            var nota2 = document.getElementById('nota2').value;
+
+            var nota3 = document.getElementById('nota3').value;
+            nota1 = parseFloat(nota1);
+            nota2 = parseFloat(nota2);
+            nota3 = parseFloat(nota3);
+            var resultado = (nota1 + nota2 + nota3) / 3.0;
+
+            txtresultado.value = resultado.toString();
+
+
+        }
+
+    </script>
+</body>
+
+</html>

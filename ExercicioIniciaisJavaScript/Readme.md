@@ -1,0 +1,1 @@
+Exercícios iniciais sobre JavaScript feitos no SENAC

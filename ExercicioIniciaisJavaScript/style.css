@@ -1,0 +1,14 @@
+#campos {
+    display: inline-flex;
+    padding-left: 5px;
+    padding-right: 5px;
+   
+}
+
+#botao {
+    display: flex;
+}
+
+#resp {
+    display: flex;
+}
