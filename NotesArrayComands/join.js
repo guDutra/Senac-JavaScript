@@ -7,4 +7,4 @@ Return Value
 String ->	The array values, separated by the specified separator.*/
 const alimentos = ["Banana", "Orange", "Apple", "Mango"];
 let texto = alimentos.join(" and ");
-console.log()
+console.log(texto);
